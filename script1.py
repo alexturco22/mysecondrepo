@@ -4,13 +4,15 @@
 
 def calcTotal(amt,tax,name):
     mytotal = amt * (1+tax)
-    print(f"{myname}, the total of your purchase is ${total:,.2f}")
+    print(f"{myname}, the total of your purchase is ${mytotal:,.2f}")     #within the {} it should be mytotal and not total.
 
 myname = 'Johnny'
-price = 1,560
-thetax = 8.25%
-
-calcTotal(thetax,price,name)
+price = 1560            #cant use a comma in 1,560
+thetax = 0.0825          #has to be 0.0825 and not 8.25%
+                                
+                                 #1) name should be changed to myname
+calcTotal(price,thetax,myname)     #2) when calling the function, the order of the arguments have to match line 5. 
+                                        #- Instead of "thetax, price, name" it should be "price, thetax, name"
 
 
 
@@ -20,8 +22,9 @@ calcTotal(thetax,price,name)
 # print out ONLY the integers in the list below #
 list1 = [1,'two',3.2,'four',5]
 
-for i in list1:
-    print(i)
+for i in list1:         
+    if type(i) == int:                        #have to make an if statement here for the integers
+        print(i)
 
 
 
